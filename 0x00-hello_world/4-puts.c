@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point
  *
- * prints out statement
- *
- * return: Always (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

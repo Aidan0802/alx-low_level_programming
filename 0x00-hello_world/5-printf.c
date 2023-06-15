@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	printf("%s","with proper grammar, but the outcome is a piece of art,");
+	printf("with proper grammar, but the outcome is a piece of art,");
+	fprintf(stderr, "Anything");
 
 	return (0);
 }

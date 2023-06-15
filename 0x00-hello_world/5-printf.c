@@ -8,6 +8,6 @@
 int main(void)
 {
 	fprintf(stdout, "with proper grammar, but the outcome is a piece of art,\n");
-	fprintf(stderr, "[Anything]");
+	fprintf(stderr, "[Anything]\n");
 	return (0);
 }

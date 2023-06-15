@@ -21,4 +21,4 @@ int main(void)
 	printf("Size of a float: %i byte(s)", float_s);
 	
 	return (0);
-}`	
+}	

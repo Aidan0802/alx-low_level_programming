@@ -5,43 +5,40 @@
  *
  * Return: Always 0 (Success)
  */
-
-int main(void)
+int main(void) 
 {
-	int a;
-	int b;
-	int c;
-	int cA = 0;
-	int cB = 0;
+	int a3;
+	int a2;
+	int a1;
+	int c1 = 0;
+	int c2 = 0;
 
-	for (c = 48; c < 58;)
+	for (a3 = 48; a3 < 56;a3++)
 	{
-		a = 49;
-		a += cA;
-
-		for (; a < 58; a++)
+		a1 = 49;
+		a1 += c1;
+		
+		for (a1; a1 < 58; a1++)
 		{
-			b = 50;
-			b += cB;
+			a2 = 50;
+			a2 += c2;
 
-			for (; b < 58; b++)
+			for (a2; a2 < 58; a2++)
 			{
-				if (a != b && a < b)
+				if (a1 != a2 && a1 < a2 )
 				{
-					putchar(c);
-					putchar(a);
-					putchar(b);
-				if (c == '7' && a == '8' && b == '9')
-				{
-					break;
-				}
+					putchar(a3);
+					putchar(a1);
+					putchar(a2);
+					if (a1 == '8' && a2 == '9' && a3 == '7')
+					{
+						break;
+					}
 					putchar(',');
 					putchar(' ');
 				}
 			}
 		}
-		cA++;
-		cB++;
+		c1++;
+		c2++;
 	}
-	return (0);
-}

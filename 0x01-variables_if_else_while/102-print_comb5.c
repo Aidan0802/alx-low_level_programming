@@ -23,8 +23,8 @@ for (a = 48; a < 58; a++)
 			}
 			for (d = 48; d < 58; d++)
 			{
-				int i = a + b;
-				int x = c + d;
+				int i = a * 2 + b;
+				int x = c * 2 + d;
 
 				if (i < x)
 				{

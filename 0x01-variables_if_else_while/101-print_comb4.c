@@ -14,9 +14,19 @@ int main(void)
 
 	for (c = 48; c < 58;)
 	{
-		for (a = 49; a < 58; a++)
+		if (a == '8')
+			a++;
+		else
+			a = 49;
+
+		for (a; a < 58; a++)
 		{
-			for (b = 50; b < 58; b++)
+			if (b == '9')
+				b++;
+			else
+				b = 50;
+
+			for (b ; b < 58; b++)
 			{
 				if (a == 56 && b == 57)
 				{

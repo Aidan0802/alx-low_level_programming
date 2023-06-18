@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int a ;
-	int b ;
-	int c ;
+	int a;
+	int b;
+	int c;
 
 	for (c = 48; c < 58; c++)
 	{
@@ -18,11 +18,12 @@ int main(void)
 		{
 			for (b = 50; b < 58; b++)
 			{
-				if ( a1 != a2 && a1 < a2)
+				if ( a != b && a < b)
 				{
-					putchar(a1);
-					putchar(a2);
-				if (a1 == 56 && a2 == 57)
+					putchar(c);
+					putchar(a);
+					putchar(b);
+				if (a == 56 && b == 57)
 				{
 					break;
 				}

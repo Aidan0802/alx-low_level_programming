@@ -19,12 +19,12 @@ int main(void)
 		a = 49;
 		a += cA;
 
-		for (a; a < 58; a++)
+		for (; a < 58; a++)
 		{
 			b = 50;
 			b += cB;
 
-			for (b; b < 58; b++)
+			for (; b < 58; b++)
 			{
 				if (a != b && a < b)
 				{

@@ -26,11 +26,15 @@ int main(void)
 				}
 				for (d = 48; d < 58; d++)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
+					if (b != c && b < d)
+					{
+						putchar(a);
+						putchar(b);
+						putchar(' ');
+						putchar(c);
+						putchar(d);
+					}
+
 					if (a == '9' && b == '8' && c == '9' && d == '9')
 					{
 						brk = 1;

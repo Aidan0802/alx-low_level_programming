@@ -26,7 +26,7 @@ int main(void)
 				}
 				for (d = 48; d < 58; d++)
 				{
-					if (b <  d)
+					if (b < d)
 					{
 						putchar(a);
 						putchar(b);
@@ -40,8 +40,11 @@ int main(void)
 						brk = 1;
 						break;
 					}
-					putchar(',');
-					putchar(' ');
+					if (b > d)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}

@@ -18,12 +18,12 @@ int main(void)
 		a1 = 49;
 		a1 += c1;
 		
-		for (a1; a1 < 58; a1++)
+		for (; a1 < 58; a1++)
 		{
 			a2 = 50;
 			a2 += c2;
 
-			for (a2; a2 < 58; a2++)
+			for (; a2 < 58; a2++)
 			{
 				if (a1 != a2 && a1 < a2 )
 				{

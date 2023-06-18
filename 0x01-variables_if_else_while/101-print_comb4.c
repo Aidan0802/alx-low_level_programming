@@ -44,6 +44,8 @@ int main(void)
 				}
 			}
 		}
+		cA++;
+		cB++;
 	}
 	return (0);
 }

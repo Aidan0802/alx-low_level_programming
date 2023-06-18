@@ -17,25 +17,21 @@ int main(void)
 	for (c = 48; c < 58;)
 	{
 		a = 49;
-		a += cA
-			;
-		for (; a < 58; a++)
+		a += cA;
+
+		for (a; a < 58; a++)
 		{
 			b = 50;
 			b += cB;
 
-			for ( ; b < 58; b++)
+			for (b; b < 58; b++)
 			{
-				if (a == 56 && b == 57)
-				{
-					c++;
-				}
 				if (a != b && a < b)
 				{
 					putchar(c);
 					putchar(a);
 					putchar(b);
-				if (c == 55 && a == 56 && b == 57)
+				if (c == '7' && a == '8' && b == '9')
 				{
 					break;
 				}

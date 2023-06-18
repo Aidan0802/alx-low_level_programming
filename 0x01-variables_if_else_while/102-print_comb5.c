@@ -40,7 +40,7 @@ int main(void)
 						brk = 1;
 						break;
 					}
-					if (b > d)
+					if (b < d)
 					{
 						putchar(',');
 						putchar(' ');

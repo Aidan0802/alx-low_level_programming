@@ -11,20 +11,18 @@ int main(void)
 	int a;
 	int b;
 	int c;
+	int cA = 0;
+	int cB = 0;
 
 	for (c = 48; c < 58;)
 	{
-		if (a == '8')
-			a++;
-		else
-			a = 49;
-
+		a = 49;
+		a += cA
+			;
 		for (; a < 58; a++)
 		{
-			if (b == '9')
-				b++;
-			else
-				b = 50;
+			b = 50;
+			b += cB;
 
 			for ( ; b < 58; b++)
 			{

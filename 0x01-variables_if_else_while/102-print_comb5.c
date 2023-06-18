@@ -26,7 +26,7 @@ for (a = 48; a < 58; a++)
 				int i = a + b;
 				int x = c + d;
 
-				if (i < x)
+				if (i > x)
 				{
 					putchar(a);
 					putchar(b);

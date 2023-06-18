@@ -19,14 +19,14 @@ int main(void)
 		else
 			a = 49;
 
-		for (a; a < 58; a++)
+		for (; a < 58; a++)
 		{
 			if (b == '9')
 				b++;
 			else
 				b = 50;
 
-			for (b ; b < 58; b++)
+			for ( ; b < 58; b++)
 			{
 				if (a == 56 && b == 57)
 				{

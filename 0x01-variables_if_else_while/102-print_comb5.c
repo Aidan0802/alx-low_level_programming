@@ -33,15 +33,12 @@ int main(void)
 						putchar(' ');
 						putchar(c);
 						putchar(d);
-					}
 
-					if (a == '9' && b == '8' && c == '9' && d == '9')
-					{
-						brk = 1;
-						break;
-					}
-					if (b < d)
-					{
+						if (a == '9' && b == '8' && c == '9' && d == '9')
+						{
+							brk = 1;
+							break;
+						}
 						putchar(',');
 						putchar(' ');
 					}

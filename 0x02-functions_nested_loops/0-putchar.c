@@ -7,14 +7,16 @@
 
 int main(void)
 {
-	char a[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	char a[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	int size = sizeof(a);
 	int i;
 
-	for (i = 0; i < 8; i++)
+
+	for (i = 0; i < size; i++)
 	{
 	    _putchar(a[i]);
 	}
 	_putchar('\n');
-	    return 0;
+	return (0);
 }
 

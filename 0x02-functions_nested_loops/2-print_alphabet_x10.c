@@ -8,11 +8,11 @@
 
 void print_alphabet_x10(void)
 {
-	int a = 97;
 	int times = 0;
 
 	while (times < 11)
 	{
+		int a = 97;
 		while(a < 123)
 		{
 			_putchar(a);
@@ -21,4 +21,3 @@ void print_alphabet_x10(void)
 		times++;
 	}
 }
-

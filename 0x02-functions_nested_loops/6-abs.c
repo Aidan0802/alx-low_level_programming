@@ -16,5 +16,6 @@ int _abs(int n)
 		printf("%i\n", n);
 		return (0);
 	}
+	printf("%i\n", n);
 	return (0);
 }

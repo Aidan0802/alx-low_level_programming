@@ -13,9 +13,8 @@ int _abs(int n)
 	if (n < 0)
 	{
 		n *= 1;
-		puts(n);
+		printf("%i\n", n);
 		return (0);
 	}
-	puts(n);
 	return (0);
 }

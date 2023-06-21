@@ -21,6 +21,7 @@ void times_table(void)
 			printf("%i", b * i);
 			putchar(',');
 			putchar(' ');
+			putchar(' ');
 		}
 		putchar('\n');
 	}

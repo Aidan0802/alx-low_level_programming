@@ -17,7 +17,9 @@ int print_last_digit(int n)
 		return (a);
 	}
 	int a = (n % 10);
-	_putchar(a + 48);
+	int b = 48 + a;
+
+	_putchar(b);
 	return (a);
 
 }

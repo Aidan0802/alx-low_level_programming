@@ -1,22 +1,21 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _abs - prints the abs number
+ * _abs - the absolute number
  *
- * n: a number to get absolute value
+ * @n: checks if its less than zero
  *
- * Return: 1 if positive, 0 if 0 and -1 if negative
+ * Return: Always 0 (Success)
  */
 
 int _abs(int n)
 {
 	if (n < 0)
 	{
-		n = n * 1;
-		_putchar(n);
+		n *= 1;
+		puts(n);
 		return (0);
 	}
-
-	_putchar(n);
+	puts(n);
 	return (0);
 }

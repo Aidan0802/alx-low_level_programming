@@ -16,10 +16,8 @@ int print_last_digit(int n)
 		_putchar(a + 48);
 		return (a);
 	}
-	int a = (n % 10);
-	int b = 48 + a;
 
-	_putchar(b);
-	return (a);
+	_putchar((n%10)+ 48);
+	return (n % 10);
 
 }

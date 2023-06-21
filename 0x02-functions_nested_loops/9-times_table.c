@@ -21,7 +21,8 @@ void times_table(void)
 			printf("%i", b * i);
 			putchar(',');
 			putchar(' ');
-			putchar(' ');
+			if (b * i < 10)
+				putchar(' ');
 		}
 		putchar('\n');
 	}

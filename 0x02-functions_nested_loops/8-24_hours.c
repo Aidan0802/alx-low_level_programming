@@ -16,12 +16,15 @@ void jack_bauer(void)
 
 	for (h1 = 48; h1 < 51; h1++)
 	{
-		for (h2 = 48; h2 < 52; h2++)
+		for (h2 = 48; h2 < 58; h2++)
 		{
 			for (m1 = 48; m1 < 54; m1++)
 			{
 				for (m2	= 48; m2 < 58; m2++)
 				{
+					if(h1 > 49 && h2 > 51)
+						break;
+
 					_putchar(h1);
 					_putchar(h2);
 					_putchar(':');

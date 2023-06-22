@@ -17,6 +17,7 @@ int _isupper(int c)
 		{
 			return (1);
 		}
+		a++;
 	}
 	return (0);
 }

@@ -14,10 +14,11 @@ int _isdigit(int c)
 
 	while (a < 58)
 	{
-		if (c = a)
+		if (c == a)
 		{
 			return (1);
 		}
+		a++
 	}
 	return (0);
 }

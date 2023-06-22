@@ -7,14 +7,13 @@
  *
  * Return: 1 if its an upper, 0 if otherwise
  */
-
 int _isupper(int c)
 {
 	int a = 65;
 
 	while (a < 91)
 	{
-		if (c = a)
+		if (c == a)
 		{
 			return (1);
 		}

@@ -10,11 +10,11 @@
 
 void print_diagonal(int n)
 {
-	int row, columns, space;
+	int row, columns;
 
 	for (row = 0; row <= n; row++)
 	{
-		for (columns = 0; columns < rows; columns++)
+		for (columns = 0; columns < row; columns++)
 		{
 			_putchar(' ');
 		}

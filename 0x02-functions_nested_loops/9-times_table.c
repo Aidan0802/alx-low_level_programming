@@ -4,9 +4,8 @@
 /**
  * times_table - increases the number and uses every
  *
- * @n: a certian number
  *
- * Return: the last digit of n
+ * Return: void
  */
 
 void times_table(void)
@@ -14,13 +13,16 @@ void times_table(void)
 	int i;
 	int b;
 
-	for ( i = 0; i < 10; i++)
+	for (i = 0; i < 10; i++)
 	{
 		for (b = 0; b < 10; b++)
 		{
 			printf("%i", b * i);
-			putchar(',');
+			if (b != 9)
+				putchar(',');
+
 			putchar(' ');
+
 			if (b * i < 10)
 				putchar(' ');
 		}

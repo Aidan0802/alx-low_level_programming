@@ -8,25 +8,28 @@
 
 void more_numbers(void)
 {
-	int i = 48;
-	int x = 48;
+	int i;
+	int x;
+	int j;
 
-	while (x < 50)
+	for (i = 0; i < 10; i++)
 	{
-		while (i < 58)
+		for (x = 48; x <= 49; x++)
 		{
-			if (x >= 50 && i >= 54)
+			for (j = 49; j < 58; j++)
 			{
-				break;
+				if (x == 49)
+					_putchar(x);
+				
+				_putchar(j);
+					
+				if (x >= 49 && j >= 52)
+				{
+					break;
+				}
 			}
-			if (x >= 49)
-			{
-				_putchar(x);
-			}
-			_putchar(i);
-			i++;
 		}
 		_putchar('\n');
-	}
+	}	
 
 }

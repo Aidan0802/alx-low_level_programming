@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints diagonal line
+ * print_square - prints a # square
  *
- * @n: length of the line
+ * @size: square size
  *
  * Return: void
  */
 
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int row, columns;
 
-	for (row = 0; row <= n; row++)
+	for (row = 0; row <= size; row++)
 	{
-		for (columns = 0; columns < n; columns++)
+		for (columns = 0; columns < size; columns++)
 		{
 			_putchar('#');
 		}

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - prints a # triangle
+ * print_triangle - prints a # triangle
  *
  * @size: angle size
  *
@@ -18,7 +18,7 @@ void print_triangle(int size)
 		{
 			_putchar(' ');
 		}
-		
+	
 		for (k = 1; k < i + 1; k++)
 		{
 			_putchar('#');

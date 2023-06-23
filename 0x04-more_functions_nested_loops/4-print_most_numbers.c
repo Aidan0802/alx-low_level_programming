@@ -13,11 +13,19 @@ void print_most_numbers(void)
 
 	while (n < 58)
 	{
-		if (n != 50 || n != 52)
+		if (n == 50)
+		{
+			n++;
+		}
+		else if (n == 52)
+		{
+			n++;
+		}
+		else
 		{
 			_putchar(n);
+			n++;
 		}
-		n++;
 	}
 	_putchar('\n');
 }

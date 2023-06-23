@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * print_numbers - prints 1 - 9 ends with new line
+ * print_most_numbers - prints 1 - 9 ends with new line
+ * except 2 and 4
  *
  * Return: calculation
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int n = 48;
 

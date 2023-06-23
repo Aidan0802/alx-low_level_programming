@@ -22,13 +22,16 @@ int main(void)
 			continue;
 		}
 
-		if (i % 5 == 0)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
 			continue;
 		}
-		printf("%i ", i);	
+		else
+		{
+			printf("%i ", i);
+		}
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }

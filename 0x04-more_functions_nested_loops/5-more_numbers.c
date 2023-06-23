@@ -20,9 +20,7 @@ void more_numbers(void)
 			{
 				if (x == 49)
 					_putchar(x);
-				
 				_putchar(j);
-					
 				if (x >= 49 && j >= 52)
 				{
 					break;

@@ -12,7 +12,7 @@ void print_numbers(void)
 
 	while (n < 58)
 	{
-		if (n != 50 && n != 52)
+		if (n != 50 || n != 52)
 		{
 			_putchar(n);
 		}

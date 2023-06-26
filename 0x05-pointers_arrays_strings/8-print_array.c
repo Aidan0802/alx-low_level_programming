@@ -3,6 +3,9 @@
 /**
  * print_array - prints elements of array
  *
+ * @a: array
+ * @n: lenght of array
+ *
  * Return: void
  */
 

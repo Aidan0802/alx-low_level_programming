@@ -3,6 +3,8 @@
 /**
  * puts_half - prints half of the string
  *
+ * @str: prints half of the string
+ *
  * Return: void
  */
 
@@ -16,7 +18,9 @@ void puts_half(char *str)
 		count++;
 	}
 
-	int half = count/2;
+	int half;
+
+	half = count / 2;
 
 	for (a = half; a < count; a++)
 	{

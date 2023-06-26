@@ -12,14 +12,9 @@ void rev_string(char *s)
 {
 	int i, l;
 	char temp = s[0];
-	int len = 0;
+	int len = _strlen(s);
 
-	for (l = 0; s[l]; l++)
-	{
-		len++;
-	}
-
-	for (i = 0; i < len/2; i++)
+	for (i = 0; i < len / 2; i++)
 	{
 		temp = s[i];
 		s[i] = s[len - i - 1];

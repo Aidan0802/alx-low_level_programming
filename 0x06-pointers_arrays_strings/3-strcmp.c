@@ -24,7 +24,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			count++;
 		}
-		return count;
+		return (count);
 	}
 	else
 	{
@@ -32,6 +32,6 @@ int _strcmp(char *s1, char *s2)
 		{
 			count--;
 		}
-		return count;
+		return (count);
 	}
 }

@@ -16,10 +16,9 @@ char *_strcpy(char *dest, char *src)
 	for (i = 0; src[i] >= '\0'; i++)
 	{
 		dest[i] = src[i];
-
-	}
-	printf("sourc: %s\n", src);
-	printf("destin: %s\n", dest);	
+		if (src[i] == '\0')
+			break;
+	}	
 	return (dest);
 
 }

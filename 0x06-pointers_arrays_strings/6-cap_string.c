@@ -19,7 +19,7 @@ char *cap_string(char *c)
 	{
 		for (a = 0; a < 13; a++)
 		{
-			if (c[i] == seper[a])
+			if (c[i] == separ[a])
 			{
 				if (c[i + 1] - 26 < 65)
 					continue;

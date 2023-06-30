@@ -17,8 +17,8 @@ char *cap_string(char *c)
 
 	for (i = 0; c[i]; i++)
 	{
-		if (c[0] - 26 < 65)
-			c[0] = c[0] + 32;
+		if (c[0] > 96)
+			c[0] = c[0] - 32;
 		for (a = 0; a < 13; a++)
 		{
 			if (c[i] == separ[a])

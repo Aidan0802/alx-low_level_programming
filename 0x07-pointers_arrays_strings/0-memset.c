@@ -2,7 +2,7 @@
 
 /**
  * _memset - fills memory with constant byte
- * 
+ *
  * @s: string
  * @b: character
  * @n: unsigned integer

@@ -12,25 +12,12 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-	int i, a;
-	char c = ' ';
+	unsigned int count = 0, i;
 
 	for (i = 0; accept[i]; i++)
 	{
-		for (a = 0; s[a]; a++)
-		{
-			if (c == s[a])
-				continue;
-			else if (accept[i] == s[a])
-			{
-				count++;
-				c = accept[i];
-			}
-		}
+		if (s[i] == accept[count])
+			count++;
 	}
-	return (count + 1);
-	/**
-	 * adding one is the '\0' character
-	 */
+	return (count);
 }

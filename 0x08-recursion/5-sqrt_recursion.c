@@ -33,9 +33,10 @@ int _sqrt_recursion(int n)
 int sqrt_cal(int n, int i)
 {
 	if(i % (n / i) == 0)
+	{
 		if (n * (n / i) == n)
 			return (i);
-		else
-			return (-1);
+		return (-1);
+	}
 	return (sqrt_cal(n, i + 1));
 }

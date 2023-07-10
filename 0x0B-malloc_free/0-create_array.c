@@ -13,9 +13,9 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
-	char *buffer = malloc(size);
+	char *buffer = NULL;
 
-	if ((sizeof(buffer)) == '\0' || size == 0)
+	if ((buffer = malloc(size)) == NULL || size == 0)
 		return ('\0');
 
 	for (i = 0; i < size; i++)

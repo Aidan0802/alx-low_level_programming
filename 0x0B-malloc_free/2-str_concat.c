@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * str_concat - concatenates two strings
@@ -12,19 +13,29 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i;
+	int i, x = 0, len1 = 0, len2 = 0;
 	char *buffer = NULL;
 
-	buffer = malloc(sizeof(s1) + sizeof(s2));
+	for (i = 0; s1[i]; i++)
+		len1++;
+	
+	for (i = 0; s2[i]; i++)
+		len2++;
+
+	printf("%d %d\n", len1, len2);
+	buffer = malloc(len1 + len2);
 
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 0; i < s1[i]; i++)
+	for (i = 0; i < len1; i++)
 		buffer[i] = s1[i];
 
-	for (; i < sizeof(buffer); i++)
-		buffer[i] += s2[i];
+	for (i = len1; i < len1 + len2; i++)
+	{
+		buffer[i] += s2[x];
+		x++;
+	}
 
 	return (buffer);
 }

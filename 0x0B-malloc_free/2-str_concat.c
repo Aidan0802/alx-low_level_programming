@@ -40,8 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		buffer[0] = ' ';
-		buffer[1] = '\0';
+		buffer[0] = '\0';
 		return (buffer);
 	}
 

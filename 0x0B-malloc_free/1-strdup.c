@@ -19,14 +19,14 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] <= '\0'; i++)
+	for (i = 0; str[i]; i++)
 		len++;
 
-	buffer = malloc(len);
+	buffer = malloc(len + 1);
 	if (buffer == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] <= '\0'; i++)
+	for (i = 0; str[i]; i++)
 		buffer[i] = str[i];
 
 	return (buffer);

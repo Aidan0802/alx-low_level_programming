@@ -13,16 +13,31 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, x = 0, len1 = 0, len2 = 0, size = 0;
+	int i, x = 0;
+	int len1 = 0, len2 = 0, size = 0;
 	char *buffer = NULL;
+	
+	if (s1 == NULL && s2 == NULL)
+		return ('\0');
+	
+	if (s1 != NULL)
+	{
+		for (i = 0; s1[i]; i++)
+			len1++;
+	}
 
-	for (i = 0; s1[i]; i++)
-		len1++;
-
-	for (i = 0; s2[i]; i++)
-		len2++;
-
-	size = len1 + len2;
+	if (s2 != NULL)
+	{
+		for (i = 0; s2[i]; i++)
+			len2++;
+	}
+	
+	if (len1 == 0)
+		size = len2;
+	else if (len2 == 0)
+		size = len1;
+	else
+		size = len1 + len2;
 
 	buffer = malloc(size + 1);
 
@@ -30,25 +45,22 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (i = 0; i < len1; i++)
-	{
-		if (s1 == NULL)
-			break;
-
 		buffer[i] = s1[i];
-	}
-
-	if (s1 == NULL)
-		size = len2;
 
 	for (i = len1; i < size; i++)
 	{
-		if (s1 == NULL)
+		if (len1 == 0)
 		{
 			buffer[i] = s2[i];
 			continue;
 		}
-		buffer[i] += s2[x];
-		x++;
+		else if (s2 == NULL)
+			break;
+		else
+		{
+			buffer[i] += s2[x];
+			x++;
+		}
 	}
 
 	return (buffer);

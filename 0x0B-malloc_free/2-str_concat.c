@@ -18,11 +18,10 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1[i]; i++)
 		len1++;
-	
+
 	for (i = 0; s2[i]; i++)
 		len2++;
 
-	printf("%d %d\n", len1, len2);
 	buffer = malloc(len1 + len2);
 
 	if (buffer == NULL)

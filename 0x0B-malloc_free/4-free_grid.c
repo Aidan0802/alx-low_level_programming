@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees 2 dim array that 
+ * free_grid - frees 2 dim array that
  * was previously created
  *
  * @grid: 2 dimensional grid

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints minimal number of
@@ -12,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, coins, cents;
+	int coins, cents;
 
 	if (argc == 1 || argc > 2)
 	{

@@ -5,15 +5,17 @@
  *
  * @b: unsigned integer
  *
- * Return: void
+ * Return: pointer to address otherwise
+ * 98 if it fails
  */
 
 void *malloc_checked(unsigned int b)
 {
-	char *mem;
+	char *memp;
 
-	mem = malloc(b);
-	if (mem == NULL)
+	memp = malloc(b);
+	if (memp == NULL)
 		exit(98);
-	return (mem);
+
+	return (memp);
 }

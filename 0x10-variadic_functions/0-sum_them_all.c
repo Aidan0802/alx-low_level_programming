@@ -10,7 +10,7 @@
  * returns 0 if n is 0
  */
 
-int sum_them_all(const unsigned n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i, res = 0;
 	va_list args;

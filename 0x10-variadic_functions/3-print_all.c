@@ -11,7 +11,7 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i, n;
+	int i, n;
 	va_list args;
 	const char format_args[] = "cifs";
 	char *s;
@@ -43,8 +43,10 @@ void print_all(const char * const format, ...)
 		while (format_args[n])
 		{
 			if (format[i] == format_args[n] && format[i + 1] != '\0')
+			{
 				printf(", ");
-			n++;
+				break;
+			}n++;
 		}
 		n = 0, i++;
 	}

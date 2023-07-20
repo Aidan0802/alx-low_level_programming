@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	char *s;
 
 	va_start(args, format);
-	while (format[i] && format)
+	while (format[i])
 	{
 		switch (format[i])
 		{
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-		}
+		} i++;
 		while (format_args[n])
 		{
 			if (format[i] == format_args[n] && format[i + 1] != '\0')
@@ -48,7 +48,7 @@ void print_all(const char * const format, ...)
 				break;
 			} n++;
 		}
-		n = 0, i++;
+		n = 0
 	}
 	printf("\n"), va_end(args);
 }

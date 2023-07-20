@@ -9,14 +9,14 @@
  * Return: void
  */
 
-void print_string(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	va_list args;
 	char *s;
 	
-	va_start(args, separator);
-	for (i = 0; separator[i]; i++)
+	va_start(args, n);
+	for (i = 0; i < n; i++)
 	{
 		s = va_arg(args, char *);
 		if (s == NULL)
@@ -24,7 +24,8 @@ void print_string(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", s);
 		if (separator != NULL)
-			if (s[i + 1] != '\0')
+			if (n - 1 > i)
 				printf("%s ", separator);
 	}
+	printf("\n");
 }

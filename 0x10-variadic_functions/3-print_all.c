@@ -31,13 +31,13 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 			case 's':
-				s = va_arg(args, char *)
+				s = va_arg(args, char *);
 				if (s == NULL)
 				{
 					printf("(nil)");
 					break;
 				}
-				printf("%s", va_arg(args, char *));
+				printf("%s", s);
 				break;
 		}
 		while (format_args[n])

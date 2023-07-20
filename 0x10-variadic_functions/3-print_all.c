@@ -39,16 +39,16 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-		} i++;
+		}
 		while (format_args[n])
 		{
-			if (format[i] == format_args[n] && format[i] != '\0')
+			if (format[i] == format_args[n] && format[i + 1] != '\0')
 			{
 				printf(", ");
 				break;
 			} n++;
 		}
-		n = 0;
+		n = 0, i++;
 	}
 	printf("\n"), va_end(args);
 }

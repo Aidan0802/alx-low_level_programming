@@ -1,5 +1,5 @@
+#include "variadic_functions.h"
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -16,6 +16,7 @@ void print_all(const char * const format, ...)
 	int i, n;
 	va_list args;
 	const char format_args[] = "cifs";
+	char *s;
 
 	va_start(args, format);
 
@@ -33,11 +34,13 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 			case 's':
-				if (*format[i] == NULL)
+				s = va_arg(args, char *)
+				if (s == NULL)
+				{
 					printf("(nil)");
+					break;
+				}
 				printf("%s", va_arg(args, char *));
-				break;
-			default:
 				break;
 		}
 		while (format_args[n])
@@ -46,9 +49,7 @@ void print_all(const char * const format, ...)
 				printf(", ");
 			n++;
 		}
-		n = 0;
-		i++;
+		n = 0, i++;
 	}
-	printf("\n");
-	va_end(args);
+	printf("\n"), va_end(args);
 }

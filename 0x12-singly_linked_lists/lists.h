@@ -12,16 +12,18 @@
  * @next: pointing to next node
  */
 
-typedef struct list
+typedef struct list list_t;
+
+struct list
 {
 	char *str;
 	int len;
 	list_t *next;
-} list_t;
+};
 
 
 int _putchar(int);
 size_t print_list(const list_t *h);
-size_t list_len(cont list_t *h);
+size_t list_len(const list_t *h);
 
 #endif

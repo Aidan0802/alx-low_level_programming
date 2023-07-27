@@ -20,10 +20,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	for (i = 0; str[i]; i++)
 		;
-	
+
 	nodePtr->str = strdup(str);
 	nodePtr->len = i;
-	
+
 	if (!(*head))
 		*head = nodePtr;
 	else

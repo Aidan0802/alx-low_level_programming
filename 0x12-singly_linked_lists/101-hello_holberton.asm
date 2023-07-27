@@ -1,5 +1,5 @@
 	SECTOIN .data
-msg:	db "Hello, Hilberton", 0
+msg:	db "Hello, Holberton", 0
 fmt:	db "%s", 10, 0
 
 	SECTION	.text
@@ -12,5 +12,5 @@ _start:
 	mov eax, 0
 	call printf
 
-	mov ebx, 0
-	ret
+	mov eax, 0
+	int 0x80

@@ -4,6 +4,7 @@
  * add_nodeint_end - add node at end of listint_t type
  *
  * @head: address of new node
+ * @n: input integers
  * Return: address of new element. NULL if failed
  */
 
@@ -25,7 +26,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		lastNode = *head;
 		while (lastNode->next)
 			lastNode = lastNode->next;
-		
+
 		lastNode->next = nodePtr;
 	}
 	return (lastNode);

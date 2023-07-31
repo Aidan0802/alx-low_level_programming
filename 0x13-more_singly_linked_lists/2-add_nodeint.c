@@ -3,7 +3,7 @@
 /**
  * add_nodeint - adds a new node at beginning of listint_t type
  *
- * @h: address of new node
+ * @head: address of new node
  * @n: integer input
  * Return: address of new new element.
  * NULL if failed

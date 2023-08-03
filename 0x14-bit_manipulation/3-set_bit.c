@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * set_bit - sets bit at given index
@@ -12,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	*n = *n | 1 << index;
 
-	if (1 & (1 << index))
+	if (index != 0)
 		return (1);
 	else
 		return (0);

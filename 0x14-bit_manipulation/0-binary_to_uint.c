@@ -5,7 +5,7 @@
  * binary_to_uint - converts binary to unsigned int
  *
  * @b: binary number
- * Return: Converted number. 0 if there is 
+ * Return: Converted number. 0 if there is
  * charaters other than 0 or 1 or is b is NULL
  */
 

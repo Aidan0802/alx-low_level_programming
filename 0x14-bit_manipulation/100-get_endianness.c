@@ -10,6 +10,6 @@ int get_endianness(void)
 {
 	unsigned int check = 1;
 	unsigned int *c = &check;
-	
+
 	return ((int)*c);
 }

@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	else
 		f_from = open(argv[1], O_RDONLY);
 	if (access(argv[2], 0) == 0)
-		f_to = open(argv[2], O_TRUNC);
+		f_to = open(argv[2], O_TRUNC | O_WRONLY);
 	else
 		f_to = open(argv[2], O_WRONLY | O_CREAT, 0660);
 	if (f_to == -1)

@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		f_to = open(argv[2], O_WRONLY | O_CREAT, 0660);
 	if (f_to == -1)
 	{
-		fprintf(stderr, "Error: Can't write to %s", argv[2]);
+		fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 

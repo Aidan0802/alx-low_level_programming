@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	if (access(argv[1], 0) != 0)
+	if (access(argv[1], 0) != 0 || !(open(argv[1], O_RDONLY)))
 	{
-		fprintf(stderr, "Error: Can't read from file %s", argv[1]);
+		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	else

@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int f_from, f_to, sizei, f_i, f_o;
+	int f_from, f_to, size, f_i, f_o;
 	char buf[MAX_BYTES];
 
 	if (argc != 3)
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
 	f_i = close(f_from);
 	f_o = close(f_to);
-	
+
 	if (f_i != 0 && f_o != 0)
 		exit(100);
 

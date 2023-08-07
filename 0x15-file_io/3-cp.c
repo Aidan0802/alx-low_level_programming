@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
 
 	if (f_from >= 0 && f_to >= 0)
 	{
-		fclose(f_from);
-		fclose(f_to);
+		close(f_from);
+		close(f_to);
 	}
 	else
 		exit(100);

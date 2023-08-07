@@ -40,5 +40,13 @@ int main(int argc, char *argv[])
 		write(f_to, buf, size);
 	}
 
+	if (f_from >= 0 && f_to >= 0)
+	{
+		fclose(f_from);
+		fclose(f_to);
+	}
+	else
+		exit(100);
+
 	return (0);
 }

@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int f_from, f_to, size;
+	int f_from, f_to, sizei, f_i, f_o;
 	char buf[MAX_BYTES];
 
 	if (argc != 3)
@@ -39,12 +39,10 @@ int main(int argc, char *argv[])
 	while ((size = read(f_from, buf, MAX_BYTES)) > 0)
 		write(f_to, buf, size);
 
-	if (f_from > 0 && f_to > 0)
-	{
-		close(f_from);
-		close(f_to);
-	}
-	else
+	f_i = close(f_from);
+	f_o = close(f_to);
+	
+	if (f_i != 0 && f_o != 0)
 		exit(100);
 
 	return (0);

@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	if (access(argv[2], 0) == 0)
 		f_to = open(argv[2], O_TRUNC | O_WRONLY);
 	else
-		f_to = open(argv[2], O_WRONLY | O_CREAT, 0660);
+		f_to = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	if (f_to == -1)
 	{
 		fprintf(stderr, "Error: Can't write to %s\n", argv[2]);

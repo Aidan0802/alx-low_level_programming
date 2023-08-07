@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	while ((size = read(f_from, buf, MAX_BYTES)) > 0)
 		write(f_to, buf, size);
 
-	if (f_from >= 0 && f_to >= 0)
+	if (f_from > 0 && f_to > 0)
 	{
 		close(f_from);
 		close(f_to);

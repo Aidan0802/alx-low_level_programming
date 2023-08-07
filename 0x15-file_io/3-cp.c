@@ -26,9 +26,10 @@ int main(int argc, char *argv[])
 	}
 	else
 		f_from = open(argv[1], O_RDONLY);
-
-	f_to = open(argv[2], O_WRONLY | O_CREAT, 0660);
-
+	if (access(argv[2], 0) == 0)
+		f_to = open(argv[2], O_TRUNC);
+	else
+		f_to = open(argv[2], O_WRONLY | O_CREAT, 0660);
 	if (f_to == -1)
 	{
 		fprintf(stderr, "Error: Can't write to %s", argv[2]);
@@ -36,9 +37,7 @@ int main(int argc, char *argv[])
 	}
 
 	while ((size = read(f_from, buf, MAX_BYTES)) > 0)
-	{
 		write(f_to, buf, size);
-	}
 
 	if (f_from >= 0 && f_to >= 0)
 	{

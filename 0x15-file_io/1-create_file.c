@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (len != 0)
 	{
-		write(f_input, text_contex, len);
+		write(f_input, text_content, len);
 	}
 	return (1);
 }

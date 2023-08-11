@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	if (access(argv[1], 0) != 0 || f_from = open(argv[1], O_RDONLY) == -1)
+	if (access(argv[1], 0) != 0 || (f_from = open(argv[1], O_RDONLY)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);

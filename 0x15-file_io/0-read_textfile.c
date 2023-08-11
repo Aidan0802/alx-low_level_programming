@@ -28,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		if (i == letters)
 			break;
-		write(2, buf, size), i++;
+		write(STDOUT_FILENO, buf, size), i++;
 	}
 
 	close(fd);

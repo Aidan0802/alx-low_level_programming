@@ -24,12 +24,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	f_from = open(argv[1], O_RDONLY);
-	if (f_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
 	if (access(argv[2], 0) == 0)
 		f_to = open(argv[2], O_TRUNC | O_WRONLY);
 	else
@@ -39,8 +33,16 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((size = read(f_from, buf, MAX_BYTES)) > 0)
+	while (size > 0)
+	{
+		size = read(f_from, buf, MAX_BYTES);
+		if (size == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		write(f_to, buf, size);
+	}
 	f_i = close(f_from), f_o = close(f_to);
 	if (f_i != 0 || f_o != 0)
 	{

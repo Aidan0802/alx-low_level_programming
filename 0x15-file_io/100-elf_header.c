@@ -29,9 +29,10 @@ int main(int argc, char *argv[])
 	fread(&info_p, sizeof(info_p), 1, fp);
 	fclose(fp);
 
-	printf("Magic ");
+	printf("ELF Header:\n");
+	printf("  Magic:   ");
 	for (i = 0; i < 16; i++)
-		printf("%02X ", info_p.ident[i]);
+		printf("%02x ", info_p.ident[i]);
 	putchar('\n');
 	
 	return (0);

@@ -19,18 +19,16 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	if (access(argv[1], 0) != 0 || open(argv[1], O_RDONLY) == -1)
+	if (access(argv[1], 0) != 0 || f_from = open(argv[1], O_RDONLY) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	else
-		f_from = open(argv[1], O_RDONLY);
 	if (access(argv[2], 0) == 0)
 		f_to = open(argv[2], O_TRUNC | O_WRONLY);
 	else
 		f_to = open(argv[2], O_WRONLY | O_CREAT, 0664);
-	if (f_to == -1)
+	if ((f_to = open(argv[2], O_WRONLY | O_CREAT, 0664)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);

@@ -30,10 +30,17 @@ int main(int argc, char *argv[])
 	fclose(fp);
 
 	printf("ELF Header:\n");
-	printf("  Magic:   ");
+	printf("  Magic:  ");
 	for (i = 0; i < 16; i++)
 		printf("%02x ", info_p.ident[i]);
 	putchar('\n');
-	
+
+	printf("  Class:			     %d\n", info_p.ident[4]);
+	printf("  Data:				     %d\n", info_p.ident[5]);
+	printf("  Version:			     %u (current)\n", info_p.ident[6]);
+	printf("  OS/ABI:			     %d\n", info_p.ident[7]);
+	printf("  ABI Version:			     %u\n", info_p.ident[8]);
+	printf("  Type:				     %u (Executable file)\n", info_p.type);
+	printf("  Entry point address:		     0x%lx\n", info_p.entry);
 	return (0);
 }

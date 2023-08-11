@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int f_from, f_to, size, f_i, f_o, fd_val, wr_val;
+	int f_from, f_to, size, f_i, f_o, fd_val;
 	char buf[MAX_BYTES];
 
 	if (argc != 3)
@@ -27,6 +27,11 @@ int main(int argc, char *argv[])
 		f_to = open(argv[2], O_TRUNC | O_WRONLY);
 	else
 		f_to = open(argv[2], O_WRONLY | O_CREAT, 0664);
+	if (f_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	while (size > 0)
 	{
 		size = read(f_from, buf, MAX_BYTES);
@@ -35,12 +40,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
-		wr_val = write(f_to, buf, size);
-		if (wr_val == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		write(f_to, buf, size);
 	}
 	f_i = close(f_from), f_o = close(f_to);
 	if (f_i != 0 || f_o != 0)

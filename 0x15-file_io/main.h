@@ -10,12 +10,12 @@
 #define MAX_BYTES 1024
 
 /**
- * struct elf_head - Structure of elf head
- * @ident: Array that holds identification number 
+ * struct h_info - Structure of elf head
+ * @ident: Array that holds identification number
  * @type: Type of file
  * @version: The version of the file
  * @entry: The entry point address
- */ 
+ */
 
 struct h_info
 {

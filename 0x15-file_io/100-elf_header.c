@@ -71,7 +71,7 @@ void display_elf(int fd)
 	printf("  Version: %*d (current)\n", 27, (int)elf_header[VERSION_OFFSET]);
 	printf("  OS/ABI: %*s\n", 41, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
 	printf("  ABI Version: %*d\n", 23, (int)abi_version);
-	printf("  Type: %*s\n", 49, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
+	printf("  Type: %*s\n", 55, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
 	printf("  Entry point address: %#*lx\n", 21, (unsigned long int)entry_point);
 }
 /**

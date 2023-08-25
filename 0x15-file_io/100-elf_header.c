@@ -72,7 +72,7 @@ void display_elf(int fd)
 	printf("  OS/ABI: %*s\n", 42, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
 	printf("  ABI Version: %*d\n", 23, (int)abi_version);
 	printf("  Type: %*s\n", 48, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
-	printf("  Entry point address: %#*lx\n", 20, (unsigned long int)entry_point);
+	printf("  Entry point address: %*lx\n", 20, (unsigned long int)entry_point);
 }
 /**
  * read_header - Read elf header

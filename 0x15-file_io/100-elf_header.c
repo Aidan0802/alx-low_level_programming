@@ -44,11 +44,11 @@ void display_elf(int fd)
 	const char *data_names[] = {"None", "2's complement, little endian",
 		"2's complement, big endian"};
 	const char *os_abi_names[] = {
-	"UNIX - System V", "UNIX - SHP-UX", "UNIX - SNetBSD", "UNIX - SLinux",
-	"UNIX - SGNU Hurd", "UNIX - SSolaris", "UNIX - SAIX", "UNIX - SIRIX",
-	"UNIX - SFreeBSD", "UNIX - STru64", "UNIX - SNovell Modesto",
-	"UNIX - SOpenBSD", "UNIX - SOpenVMS", "UNIX - SNonStop Kernel",
-	"UNIX - SAROS", "UNIX - SFenix OS", "UNIX - SCloudABI",
+	"UNIX - System V", "UNIX - HP-UX", "UNIX - NetBSD", "UNIX - Linux",
+	"UNIX - GNU Hurd", "UNIX - Solaris", "UNIX - AIX", "UNIX - IRIX",
+	"UNIX - FreeBSD", "UNIX - Tru64", "UNIX - Novell Modesto",
+	"UNIX - OpenBSD", "UNIX - OpenVMS", "UNIX - NonStop Kernel",
+	"UNIX - AROS", "UNIX - Fenix OS", "UNIX - CloudABI",
 	};
 	const char *type_names[] = {
 	"None", "REL (Relocatable)", "EXEC (Executable file)", "DYN (Shared object)",

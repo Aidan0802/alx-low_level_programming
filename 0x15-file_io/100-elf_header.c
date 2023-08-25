@@ -69,9 +69,9 @@ void display_elf(int fd)
 	printf("  Class: %*s\n", 33, class_names[(int)elf_header[CLASS_OFFSET]]);
 	printf("  Data: %*s\n", 58, data_names[(int)elf_header[DATA_OFFSET]]);
 	printf("  Version: %*d (current)\n", 27, (int)elf_header[VERSION_OFFSET]);
-	printf("  OS/ABI: %*s\n", 42, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
+	printf("  OS/ABI: %*s\n", 39, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
 	printf("  ABI Version: %*d\n", 23, (int)abi_version);
-	printf("  Type: %*s\n", 48, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
+	printf("  Type: %*s\n", 42, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
 	printf("  Entry point address: %*lx\n", 20, (unsigned long int)entry_point);
 }
 /**

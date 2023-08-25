@@ -75,7 +75,7 @@ void display_elf(int fd)
 	printf("  Entry point address: %#*lx\n", 20, (unsigned long int)entry_point);
 }
 /**
- * read_elf - Read elf header
+ * read_header - Read elf header
  * @fd: File descriptor
  * @elf_header: Elf header
  * Return: void

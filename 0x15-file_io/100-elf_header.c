@@ -45,10 +45,10 @@ void display_elf(int fd)
 		"2's complement, big endian"};
 	const char *os_abi_names[] = {
 	"UNIX - System V", "UNIX - HP-UX", "UNIX - NetBSD", "UNIX - Linux",
-	"UNIX - GNU Hurd", "UNIX - Solaris", "UNIX - AIX", "UNIX - IRIX",
+	"UNIX - GNU Hurd", "UNIX - AIX", "UNIX - Solaris", "UNIX - IRIX",
 	"UNIX - FreeBSD", "UNIX - Tru64", "UNIX - Novell Modesto",
 	"UNIX - OpenBSD", "UNIX - OpenVMS", "UNIX - NonStop Kernel",
-	"UNIX - AROS", "UNIX - Fenix OS", "UNIX - CloudABI",
+	"UNIX - AROS", "UNIX - Fenix OS", "UNIX - CloudABI"
 	};
 	const char *type_names[] = {
 	"None", "REL (Relocatable)", "EXEC (Executable file)", "DYN (Shared object)",
@@ -69,10 +69,10 @@ void display_elf(int fd)
 	printf("  Class: %*s\n", 33, class_names[(int)elf_header[CLASS_OFFSET]]);
 	printf("  Data: %*s\n", 58, data_names[(int)elf_header[DATA_OFFSET]]);
 	printf("  Version: %*d (current)\n", 27, (int)elf_header[VERSION_OFFSET]);
-	printf("  OS/ABI: %*s\n", 41, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
+	printf("  OS/ABI: %*s\n", 40, os_abi_names[(int)elf_header[OS_ABI_OFFSET]]);
 	printf("  ABI Version: %*d\n", 23, (int)abi_version);
-	printf("  Type: %*s\n", 52, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
-	printf("  Entry point address: %#*lx\n", 20, (unsigned long int)entry_point);
+	printf("  Type: %*s\n", 51, type_names[*(uint16_t *)(elf_header + TY_OFFS)]);
+	printf("  Entry point address: %#*lx\n", 26, (unsigned long int)entry_point);
 }
 /**
  * read_header - Read elf header

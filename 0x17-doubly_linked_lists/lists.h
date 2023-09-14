@@ -6,6 +6,13 @@
 #include <stdio.h>
 #include <stddef.h>
 
+/**
+ * struct node - node struct
+ * @n: Number
+ * @next: Next address
+ * @prev: Previous address
+ */
+
 typedef struct node
 {
 	int n;

@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * inseret_dnodeint_at_index - Insert n at index
+ * insert_dnodeint_at_index - Insert n at index
  * @h: Head node Address
  * @idx: Index
  * @n: Number to insert
@@ -13,7 +13,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new_list = malloc(sizeof(dlistint_t));
 	dlistint_t *current = *h;
 	unsigned int count = 0;
-	
+
 	if (new_list == NULL)
 		return (NULL);
 

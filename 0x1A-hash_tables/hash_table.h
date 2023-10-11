@@ -1,6 +1,11 @@
 #ifndef HASH_TABLE
 #define HASH_TABLE
 
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TABLE_SIZE 100
+
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -29,5 +34,7 @@ typedef struct hash_table_s
      unsigned long int size;
      hash_node_t **array;
 } hash_table_t;
+
+hash_table_t *hash_table_create(unsigned long int size);
 
 #endif
